@@ -1,0 +1,1 @@
+<?phprequire ('taskModel.php');if (isset($_GET['delete'])){$delete = $_GET['delete'];deleteTask($delete);header('location: index.php');}?>

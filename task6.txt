@@ -1,0 +1,116 @@
+class ship
+	class Ship{
+		public $name;
+		public $year;
+		
+		//a default construct
+		public function _construct($name,$year){
+			$this->name=$name;
+			$this->year=$year;
+		}
+		
+		//set and get name
+		public function setName($value){
+			$this->name=$value;
+		}public function getName(){
+			return $this->name;
+		}
+		
+		//set and get year
+		public function setYear($value){
+			$this->year=$value;
+		}public function getYear(){
+			return $this->year;
+		}
+		
+		//showOutPut() Method
+		public function showOutput(){
+			echo"<strong>Ship</strong><br />";
+			echo "Name " . $this->getName() . "<br />";
+			echo "Year " . $this->getYear() . "<br /><br />";
+		}
+		
+	}
+	
+	// CruiseShip inherites Class Ship
+	class CruiseShip extends Ship{
+		public $numberOfPassengers;
+		public $name;
+		
+		public function _construct($name,$numberOfPassengers){
+			$this->numberOfPassengers=$numberOfPassengers;
+			$this->name=$name;
+		}
+	
+		//set and get name
+		public function setName($value){
+			$this->name=$value;
+		}public function getName(){
+			return $this->name;
+		}
+		
+		//set and get numberOfPassengers
+		public function setNumOfPassengers($value){
+			$this->numberOfPassengers=$value;
+		}public function getNumOfPassengers(){
+			return $this->numberOfPassengers;
+		}
+		
+		//showOutPut() Method
+		public function showOutput(){
+			echo"<strong>Cruise Ship</strong><br />";
+			echo "Name : " . $this->getName() . "<br />";
+			echo "Maximum number of passengers : " . $this->getNumOfPassengers() . "<br /><br />";
+		}
+	
+	}
+	
+	
+	// CargoShip inherites Class Ship
+	 class CargoShip extends Ship{
+		public $tonnage;
+		
+		//constructor
+		public function _construct($name,$tonnage){
+			$this->name=$name;
+			$this->tonnage=$tonnage;
+		}	
+		
+		//set and get Name
+		public function setName($value){
+			$this->name=$value;
+		}public function getName(){
+			return $this->name;
+		}
+		//set and get Tonnage
+		public function setTonnage($value){
+			$this->tonnage=$value;
+		}public function getTonnage(){
+			return $this->tonnage;
+		}
+		
+		//showOutPut() Method
+		public function showOutput(){
+			echo"<strong>Cargo Ship</strong><br />";
+			echo "Name : " . $this->getName() . "<br />";
+			echo "Tonnage : " . $this->getTonnage() . "<br /><br />";
+		}
+	}
+
+//calling each object's showOutput method
+	$Ship = new Ship();	
+	$Ship->setName('Tisetso');
+	$Ship->setYear('2015');
+	echo $Ship->showOutput();
+	
+	
+	$Ship = new CruiseShip();
+	$Ship->setName('Tisetso');
+	$Ship->setNumOfPassengers(2015);
+	echo $Ship->showOutput();
+	
+	$Ship = new CargoShip();
+	$Ship->setName('Tisetso');
+	$Ship->setTonnage(2000);
+	echo $Ship->showOutput();
+

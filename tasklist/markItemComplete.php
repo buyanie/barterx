@@ -1,0 +1,1 @@
+<?phprequire ('taskModel.php');if(isset($_GET['taskid'])){$task_id = $_GET['taskid'];updateTask($task_id);header('location: index.php');}?>

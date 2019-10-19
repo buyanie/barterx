@@ -1,0 +1,18 @@
+<?php
+		
+
+	function whatever($required,$default = '9'){
+		$total = $required * $default;
+		return $total;
+	}
+	echo "Whatever (50); // This function call must return the value " . whatever(50) . "<br />";
+	echo "whatever(12,12);// This function call must return the value " . whatever(12,12);
+	?>
+
+
+
+
+
+<div 	id="iframe" style="text_align:center;">
+<iframe src="task1.txt" width="1200" height="400" scrolling="yes">
+<p>Your browser does not support iframes.</p></</iframe>
